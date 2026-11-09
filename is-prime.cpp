@@ -1,0 +1,31 @@
+#include <iostream>
+
+
+bool is_prime(int n);
+int main(){
+    std::cout << "Enter a number: ";
+    int num;
+    std::cin>>num;
+    if(is_prime(num)){
+        std::cout << num << " is a prime number." << std::endl;
+    }
+    else{
+        std::cout << num << " is not a prime number." << std::endl;
+    }
+    return 0;
+}
+
+
+bool is_prime(int n) {
+    if (n <= 1) {
+        return false; 
+    }
+    
+    // Optimization: check only up to the square root of n
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return false; 
+        }
+    }
+    return true; 
+}

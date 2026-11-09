@@ -1,0 +1,16 @@
+#include <iostream>
+int main(){
+    int num;
+    std::cout << "Enter the number :";
+    std::cin>>num;
+    if (num==0){
+        std::cout<<"Neither";
+    }
+    else if((num %2)==0){
+        std::cout<<"Even ";
+    }
+    else{
+        std::cout<<" odd ";
+    }
+    return 0;
+}
